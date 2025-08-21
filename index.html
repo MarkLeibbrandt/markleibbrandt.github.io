@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark Leibbrandt — Network Security Portfolio</title>
+  <meta name="description" content="Projects, labs, certifications, and contact for Mark Leibbrandt." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0c10;--card:#111317;--muted:#97a0ad;--text:#e7ecf2;--brand:#7c5cff;--ring:rgba(124,92,255,.35)}
+    :root.light{--bg:#ffffff;--card:#f5f7fb;--muted:#475569;--text:#0f172a;--brand:#5b3df6;--ring:rgba(91,61,246,.25)}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{position:sticky;top:0;background:rgba(11,12,16,.6);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06);z-index:20}
+    .nav.light{background:rgba(255,255,255,.7);border-color:rgba(15,23,42,.08)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.06),transparent)}
+    .pill.light{border-color:rgba(15,23,42,.08);background:linear-gradient(180deg,rgba(0,0,0,.03),transparent)}
+    .hero{padding:72px 0 40px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;gap:26px;padding-top:42px}}
+    .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.16em}
+    .title{font-size:clamp(28px,5vw,56px);line-height:1.05;margin:.2em 0 .3em;font-weight:800}
+    .subtitle{font-size:clamp(16px,2.2vw,20px);color:var(--muted);max-width:60ch}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid transparent;font-weight:600;cursor:pointer;transition:.2s ease}
+    .btn-primary{background:var(--brand);color:white;box-shadow:0 8px 24px -12px var(--ring)}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-ghost{border-color:rgba(255,255,255,.12)}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px}
+    .section{padding:36px 0}
+    .section h2{font-size:24px;margin:0 0 12px}
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+    .proj{display:flex;flex-direction:column;gap:10px}
+    .proj h3{margin:0;font-size:18px}
+    .proj p{margin:0;color:var(--muted)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:.3rem .55rem;border:1px solid rgba(255,255,255,.09);border-radius:999px;color:var(--muted)}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center}
+    @media (max-width:900px){.about{grid-template-columns:1fr}}
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06);margin-top:36px}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <div class="brand">Mark Leibbrandt</div>
+      <div class="nav-links">
+        <a href="#projects" class="pill" id="emailPill">📬 contact@mlnetworkservices.com (edit me)</a>
+        <a href="#" class="pill" id="themeToggle" title="Toggle theme">🌓 Theme</a>
+      </div>
+    </div>
+  </nav>
+  <header class="container hero">
+    <div>
+      <span class="kicker">Network Security Portfolio</span>
+      <h1 class="title">Network Security Engineer focused on resilient architectures, proactive defense, and clear incident response.</h1>
+      <p class="subtitle">I build secure networks, harden systems, and document repeatable incident workflows. Explore selected labs and case studies below.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <img src="assets/profile.jpg" alt="Mark Leibbrandt - profile or lab image" />
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section id="projects" class="section">
+      <h2>Featured Labs & Case Studies</h2>
+      <div class="grid grid-3">
+        <article class="card proj">
+          <h3>pfSense Firewall Hardening</h3>
+          <p>Baseline ruleset, IDS/IPS (Snort), geo-block, and least-privilege VLAN segmentation in a home lab.</p>
+          <div class="tags"><span class="tag">pfSense</span><span class="tag">Snort</span><span class="tag">VLAN</span></div>
+          <a class="btn btn-ghost" href="https://github.com/markleibbrandt" target="_blank" rel="noopener">Docs/Repo →</a>
+        </article>
+        <article class="card proj">
+          <h3>Traffic Analysis & Detection</h3>
+          <p>Captured malicious traffic with Wireshark; wrote Suricata rules to detect C2 patterns and exfiltration.</p>
+          <div class="tags"><span class="tag">Wireshark</span><span class="tag">Suricata</span><span class="tag">PCAP</span></div>
+          <a class="btn btn-ghost" href="https://github.com/markleibbrandt" target="_blank" rel="noopener">Write-up →</a>
+        </article>
+        <article class="card proj">
+          <h3>SIEM Dashboards & IR Playbook</h3>
+          <p>Built detections in Wazuh/Splunk, mapped to MITRE ATT&CK, and authored a step-by-step IR checklist.</p>
+          <div class="tags"><span class="tag">Wazuh</span><span class="tag">Splunk</span><span class="tag">IR</span></div>
+          <a class="btn btn-ghost" href="https://github.com/markleibbrandt" target="_blank" rel="noopener">Playbook →</a>
+        </article>
+      </div>
+    </section>
+    <section id="about" class="section about">
+      <div class="card">
+        <h2>About</h2>
+        <p>Hi! I'm <strong>Mark Leibbrandt</strong>. I design and defend networks with practical, measurable controls—prioritizing prevention, rapid detection, and clear documentation.</p>
+        <p class="muted">Open to consulting and full‑time roles.</p>
+      </div>
+      <div class="card">
+        <h2>Skills</h2>
+        <p class="muted">Networking (TCP/IP, VLANs, VPNs, Zero Trust), Firewalls (pfSense), IDS/IPS (Snort/Suricata), SIEM (Wazuh/Splunk), Cloud (AWS IAM basics), Scripting (Python/Bash), Tools (Nmap, Wireshark).</p>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:contact@mlnetworkservices.com">contact@mlnetworkservices.com</a> (edit if different). GitHub: <a href="https://github.com/markleibbrandt" target="_blank" rel="noopener">github.com/markleibbrandt</a>.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Mark Leibbrandt. All rights reserved. • <a href="https://markleibbrandt.github.io" target="_blank" rel="noopener">Public profile</a></p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear()
+    const root = document.documentElement
+    const nav = document.getElementById('nav')
+    const applyTheme = (light) => { root.classList.toggle('light', light); nav.classList.toggle('light', light); localStorage.setItem('theme', light ? 'light' : 'dark') }
+    const saved = localStorage.getItem('theme'); applyTheme(saved ? saved === 'light' : false)
+    document.getElementById('themeToggle').addEventListener('click', (e)=>{ e.preventDefault(); applyTheme(!root.classList.contains('light')) })
+  </script>
+</body>
+</html>
